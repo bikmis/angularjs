@@ -1,17 +1,17 @@
-<html lang="en" ng-app="myModule">
+<html lang="en" ng-app="myModule" ng-controller="myController">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script> -->
-  <script src="./Scripts/angularjs.min.js"> </script>
-  <script src="./Scripts/Script.js"></script>
-  <title ng-controller="myController">{{title}}</title>
+  <script src="./scripts/angularjs.min.js"> </script>
+  <script src="./scripts/script.js"></script>
+  <title>{{title}}</title>
 </head>
 
 <body>
-  <h1 ng-controller="myController">{{title}}</h1>
+  <h1>{{title}}</h1>
   <label for="">Name:</label>
   <input type="text" ng-model="firstname" placeholder="Enter a name here">
   <h1>Hello {{firstname}}</h1>
@@ -19,7 +19,7 @@
   <div>{{ 1 === 1}}</div>
   <div> {{ {name: 'David', age: '25'}.name}} </div>
   <div>{{['David', 'Sunny', 'Patric'][2]}}</div>
-
+  <div>Lastname: {{ employee.lastname }} | Firstname: {{employee.firstname}} | Gender: {{employee.gender}}</div>
 </body>
 
 </html>
