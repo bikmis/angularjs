@@ -1,11 +1,12 @@
-var myModule = angular.module("myModule", [])
+var myModule = angular.module('myModule', [])
                       .controller('myController',  function ($scope) {
                             var employee = { firstname: 'Sam', 
                                              lastname: 'Smith', 
                                              gender: 'Male'
                                             };
                             $scope.employee = employee;
-                            $scope.title = "AngularJS Tutorial";
+                            $scope.title = 'AngularJS Tutorial';
+                            $scope.firstname = 'Bikash';
                             var country = {
                               name: 'USA',
                               capital: 'Washington DC',
