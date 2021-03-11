@@ -16,13 +16,15 @@
     <table>
       <thead>
         <tr>
+          <th>S.N.</th>
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Gender</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat='employee in employees'>
+        <tr ng-repeat='employee in employees' ng-init='sn=$index+1'>
+          <td>{{sn}}</td>
           <td>{{employee.firstname}}</td>
           <td>{{employee.lastname}}</td>
           <td>{{employee.gender}}</td>
