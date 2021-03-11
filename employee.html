@@ -1,0 +1,30 @@
+<html lang="en" ng-app='myModule' ng-controller='myEmployee'>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='./scripts/angularjs.js'> </script>
+  <script src='./scripts/script.js'></script>
+  <title>{{title}}</title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <h4>List of Employees</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='employee in employees'>
+          <td>{{employee.firstname}}</td>
+          <td>{{employee.lastname}}</td>
+          <td>{{employee.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
