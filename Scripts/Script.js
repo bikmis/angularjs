@@ -19,10 +19,13 @@ var myModule = angular.module('myModule', [])
 myModule.controller('myEmployee', function ($scope) {
   $scope.title = 'Employee';
   var employees = [
-    { firstname: 'Jack', lastname: 'Poly', gender: 'Male' },
-    { firstname: 'Jenefer', lastname: 'White', gender: 'Female' },
-    { firstname: 'Sam', lastname: 'Jonas', gender: 'Male' }
+    { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
+    { firstname: 'Jenefer', lastname: 'White', gender: 'Female', registration: 'No' },
+    { firstname: 'Sam', lastname: 'Jonas', gender: 'Male', registration: 'Yes' }
   ]
 
   $scope.employees = employees;
+  $scope.register = function (employee) {
+    employee.registration = employee.registration === 'Yes' ? employee.registration = 'No' : employee.registration = 'Yes'
+  }
 })

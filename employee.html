@@ -20,6 +20,8 @@
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Gender</th>
+          <th>Registration</th>
+          <th>Register</th>
         </tr>
       </thead>
       <tbody>
@@ -28,6 +30,8 @@
           <td>{{employee.firstname}}</td>
           <td>{{employee.lastname}}</td>
           <td>{{employee.gender}}</td>
+          <td>{{employee.registration}}</td>
+          <td><button ng-click='register(employee)'>Change Registeration</button></td>
         </tr>
       </tbody>
     </table>
