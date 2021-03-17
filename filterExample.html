@@ -20,12 +20,14 @@
   <br>
   <br>
   <table>
-    <th>Name</th>
-    <th>Date Of Birth</th>
-    <th>Gender</th>
-    <th>Original Value</th>
-    <th>Salary</th>
-    <th>Number</th>
+    <thead ng-if="numberOfRows > 0">
+      <th>Name</th>
+      <th>Date Of Birth</th>
+      <th>Gender</th>
+      <th>Original Value</th>
+      <th>Salary</th>
+      <th>Number</th>
+    </thead>
     <tbody>
       <tr ng-repeat='employee in employees | limitTo: numberOfRows'>
         <td>{{employee.name | uppercase}}</td>
