@@ -41,4 +41,5 @@ myModule.controller('myFilter', function ($scope) {
   ]
 
   $scope.employees = employees;
+  $scope.numberOfRows = 3;
 })

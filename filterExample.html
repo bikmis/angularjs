@@ -16,6 +16,9 @@
   <a href="./employee.html">Go To Employee</a>
   <br>
   <br>
+  Number Of Rows:<input type="number" step='1' min="0" max="3" ng-model="numberOfRows">
+  <br>
+  <br>
   <table>
     <th>Name</th>
     <th>Date Of Birth</th>
@@ -24,7 +27,7 @@
     <th>Salary</th>
     <th>Number</th>
     <tbody>
-      <tr ng-repeat='employee in employees'>
+      <tr ng-repeat='employee in employees | limitTo: numberOfRows'>
         <td>{{employee.name | uppercase}}</td>
         <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
         <td>{{employee.gender | lowercase}}</td>
