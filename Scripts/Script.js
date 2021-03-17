@@ -33,4 +33,12 @@ myModule.controller('myEmployee', function ($scope) {
 
 myModule.controller('myFilter', function ($scope) {
   $scope.title = 'Filter Example';
+
+  var employees = [
+    { name: 'Jack', dateOfBirth: '01/15/1962', salary: 5000487 },
+    { name: 'John', dateOfBirth: '05/19/1975', salary: 478012 },
+    { name: 'Jane', dateOfBirth: '09/29/1981', salary: 92490 }
+  ]
+
+  $scope.employees = employees;
 })

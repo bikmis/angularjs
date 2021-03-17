@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='./scripts/angularjs.js'> </script>
   <script src='./scripts/script.js'></script>
+  <link rel="stylesheet" href="styles/site.css">
   <title>{{title}}</title>
 </head>
 <body>
   <h1>Filter Example</h1>
   <a href="./index.html">Go To Index</a> &nbsp; &nbsp; 
   <a href="./employee.html">Go To Employee</a>
+  <br>
+  <br>
+  <table>
+    <th>Name</th>
+    <th>Date Of Birth</th>
+    <th>Salary</th>
+    <tbody>
+      <tr ng-repeat='employee in employees'>
+        <td>{{employee.name}}</td>
+        <td>{{employee.dateOfBirth}}</td>
+        <td>{{employee.salary}}</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
