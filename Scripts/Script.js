@@ -35,9 +35,9 @@ myModule.controller('myFilter', function ($scope) {
   $scope.title = 'Filter Example';
 
   var employees = [
-    { name: 'Jack', dateOfBirth: '01/15/1962', salary: 5000487 },
-    { name: 'John', dateOfBirth: '05/19/1975', salary: 478012 },
-    { name: 'Jane', dateOfBirth: '09/29/1981', salary: 92490 }
+    { name: 'Jack', dateOfBirth: new Date('01/15/1962'), gender: 'Male', salary: 5000487.357 },
+    { name: 'John', dateOfBirth: new Date('05/19/1975'), gender: 'Male', salary: 478012.68 },
+    { name: 'Jane', dateOfBirth: new Date('09/29/1981'), gender: 'Female',salary: 92490.46 }
   ]
 
   $scope.employees = employees;

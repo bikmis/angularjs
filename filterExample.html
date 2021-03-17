@@ -1,4 +1,5 @@
 <html lang="en" ng-app="myModule" ng-controller="myFilter">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,31 @@
   <link rel="stylesheet" href="styles/site.css">
   <title>{{title}}</title>
 </head>
+
 <body>
   <h1>Filter Example</h1>
-  <a href="./index.html">Go To Index</a> &nbsp; &nbsp; 
+  <a href="./index.html">Go To Index</a> &nbsp; &nbsp;
   <a href="./employee.html">Go To Employee</a>
   <br>
   <br>
   <table>
     <th>Name</th>
     <th>Date Of Birth</th>
+    <th>Gender</th>
+    <th>Original Value</th>
     <th>Salary</th>
+    <th>Number</th>
     <tbody>
       <tr ng-repeat='employee in employees'>
-        <td>{{employee.name}}</td>
-        <td>{{employee.dateOfBirth}}</td>
+        <td>{{employee.name | uppercase}}</td>
+        <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
+        <td>{{employee.gender | lowercase}}</td>
         <td>{{employee.salary}}</td>
+        <td>{{employee.salary | currency: "$": 1}}</td>
+        <td>{{employee.salary | number: 2}}</td>
       </tr>
     </tbody>
   </table>
 </body>
+
 </html>
