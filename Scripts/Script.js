@@ -1,20 +1,21 @@
-var myModule = angular.module('myModule', [])
-  .controller('myController', function ($scope) {
-    var employee = {
-      firstname: 'Sam',
-      lastname: 'Smith',
-      gender: 'Male'
-    };
-    $scope.employee = employee;
-    $scope.title = 'AngularJS Tutorial';
-    $scope.firstname = 'Bikash';
-    var country = {
-      name: 'USA',
-      capital: 'Washington DC',
-      flag: '/images/usaFlag.png'
-    }
-    $scope.country = country;
-  });
+var myModule = angular.module('myModule', []);
+
+myModule.controller('myController', function ($scope) {
+  var employee = {
+    firstname: 'Sam',
+    lastname: 'Smith',
+    gender: 'Male'
+  };
+  $scope.employee = employee;
+  $scope.title = 'AngularJS Tutorial';
+  $scope.firstname = 'Bikash';
+  var country = {
+    name: 'USA',
+    capital: 'Washington DC',
+    flag: '/images/usaFlag.png'
+  }
+  $scope.country = country;
+});
 
 myModule.controller('myEmployee', function ($scope) {
   $scope.title = 'Employee';
@@ -28,4 +29,8 @@ myModule.controller('myEmployee', function ($scope) {
   $scope.register = function (employee) {
     employee.registration = employee.registration === 'Yes' ? employee.registration = 'No' : employee.registration = 'Yes'
   }
+})
+
+myModule.controller('myFilter', function ($scope) {
+  $scope.title = 'Filter Example';
 })
