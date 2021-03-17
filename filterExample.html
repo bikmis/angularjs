@@ -17,6 +17,13 @@
   <br>
   <br>
   Number Of Rows:<input type="number" step='1' min="0" max="3" ng-model="numberOfRows">
+  Sort by:
+  <select ng-model="sortColumn">
+    <option value="+salary">Asc Salary</option>
+    <option value="-salary">Desc Salary</option>
+    <option value="+name">Asc Name</option>
+    <option value="-name">Desc Name</option>
+  </select>
   <br>
   <br>
   <table>
@@ -29,7 +36,7 @@
       <th>Number</th>
     </thead>
     <tbody>
-      <tr ng-repeat='employee in employees | limitTo: numberOfRows'>
+      <tr ng-repeat='employee in employees | limitTo: numberOfRows | orderBy: sortColumn'>
         <td>{{employee.name | uppercase}}</td>
         <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
         <td>{{employee.gender | lowercase}}</td>

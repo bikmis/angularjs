@@ -36,10 +36,11 @@ myModule.controller('myFilter', function ($scope) {
 
   var employees = [
     { name: 'Jack', dateOfBirth: new Date('01/15/1962'), gender: 'Male', salary: 5000487.357 },
-    { name: 'John', dateOfBirth: new Date('05/19/1975'), gender: 'Male', salary: 478012.68 },
-    { name: 'Jane', dateOfBirth: new Date('09/29/1981'), gender: 'Female',salary: 92490.46 }
+    { name: 'Mark', dateOfBirth: new Date('05/19/1975'), gender: 'Male', salary: 478012.68 },
+    { name: 'Anita', dateOfBirth: new Date('09/29/1981'), gender: 'Female',salary: 92490.46 }
   ]
 
   $scope.employees = employees;
   $scope.numberOfRows = 3;
+  $scope.sortColumn = '-salary'
 })
