@@ -16,6 +16,9 @@
   <a href="./employee.html">Go To Employee</a>
   <br>
   <br>
+  <input name="search" type="text" placeholder="Search Name" ng-model="searchText">
+  <br>
+  <br>
   Number Of Rows:<input type="number" step='1' min="0" max="3" ng-model="numberOfRows">
   <label>Order by:</label>
   <select ng-model="sortColumn">
@@ -36,7 +39,7 @@
       <th ng-click="executeSortColumn('salary')">Number <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
     </thead>
     <tbody>
-      <tr ng-repeat='employee in employees | limitTo: numberOfRows | orderBy: sortColumnOrder + sortColumn'>
+      <tr ng-repeat='employee in employees | filter: searchText | limitTo: numberOfRows | orderBy: sortColumnOrder + sortColumn'>
         <td>{{employee.name | uppercase}}</td>
         <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
         <td>{{employee.gender | lowercase}}</td>

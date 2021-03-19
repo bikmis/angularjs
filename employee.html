@@ -14,6 +14,10 @@
   <a href="./filterExample.html">Go To Filter Example</a>
   <br>
   <br>
+  <label for="search">Firstname</label>
+  <input name="search" type="text" placeholder="Search Firstname" ng-model="searchText">
+  <br>
+  <br>
   <h4>List of Employees</h4>
     <table>
       <thead>
@@ -27,7 +31,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat='employee in employees' ng-init='sn=$index+1'>
+        <tr ng-repeat='employee in employees | filter: searchText' ng-init='sn=$index+1'>
           <td>{{sn}}</td>
           <td>{{employee.firstname}}</td>
           <td>{{employee.lastname}}</td>
