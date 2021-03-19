@@ -16,6 +16,7 @@
   <br>
   <label for="search">Search firstname:</label>
   <input style="width:300px" name="search" type="text" placeholder="Enter firstname" ng-model="searchText.firstname">
+  Exact Match?:<input type="checkbox" ng-model="exactMatch">
   <br>
   <br>
   <h4>List of Employees</h4>
@@ -31,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat='employee in employees | filter: searchText' ng-init='sn=$index+1'>
+        <tr ng-repeat='employee in employees | filter:searchText:exactMatch' ng-init='sn=$index+1'>
           <td>{{sn}}</td>
           <td>{{employee.firstname}}</td>
           <td>{{employee.lastname}}</td>

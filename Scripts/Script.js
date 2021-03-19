@@ -49,4 +49,19 @@ myModule.controller('myFilter', function ($scope) {
     $scope.sortColumnOrder = $scope.sortColumnOrder === '+' ? '-' : '+'
     $scope.sortColumn = column;
   }
+
+  $scope.searchByNameOrGender = function (employee) {
+    if ($scope.searchText == undefined) {
+      return true;
+    }
+
+    if (employee.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||
+        employee.gender.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1
+    ) {
+      return true;
+    }
+
+    return false;
+  }
+
 })

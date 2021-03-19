@@ -16,8 +16,7 @@
   <a href="./employee.html">Go To Employee</a>
   <br>
   <br>
-  <label for="search">Search any text in the table below:</label>
-  <input style="width:300px" name="search" type="text" placeholder="Enter any text (not formatted)" ng-model="searchText">
+  <input style="width:300px" type="text" placeholder="Filter by name or gender" ng-model="searchText">
   <br>
   <br>
   Number Of Rows:<input type="number" step='1' min="0" max="3" ng-model="numberOfRows">
@@ -40,10 +39,10 @@
       <th ng-click="executeSortColumn('salary')">Number <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
     </thead>
     <tbody>
-      <tr ng-repeat='employee in employees | filter: searchText | limitTo: numberOfRows | orderBy: sortColumnOrder + sortColumn'>
-        <td>{{employee.name | uppercase}}</td>
+      <tr ng-repeat='employee in employees | filter:searchByNameOrGender | limitTo:numberOfRows | orderBy:sortColumnOrder + sortColumn'>
+        <td>{{employee.name}}</td>
         <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
-        <td>{{employee.gender | lowercase}}</td>
+        <td>{{employee.gender}}</td>
         <td>{{employee.salary}}</td>
         <td>{{employee.salary | currency: "$": 1}}</td>
         <td>{{employee.salary | number: 2}}</td>
