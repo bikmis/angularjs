@@ -20,7 +20,7 @@
   Exact Match?:<input type="checkbox" ng-model="exactMatch">
   <br>
   <br>
-  Hide Gender?: <input type="checkbox" ng-model="showGender">
+  Hide Gender?: <input type="checkbox" ng-model="hideGender">
   Show Registration?: <input type="checkbox" ng-model="showRegistration">
   <br>
   <br>
@@ -31,7 +31,7 @@
           <th>S.N.</th>
           <th>Firstname</th>
           <th>Lastname</th>
-          <th ng-hide="showGender">Gender</th>
+          <th>Gender</th>
           <th ng-show="showRegistration">Registration</th>
           <th>Register</th>
         </tr>
@@ -41,7 +41,8 @@
           <td>{{sn}}</td>
           <td>{{employee.firstname}}</td>
           <td>{{employee.lastname}}</td>
-          <td ng-hide="showGender">{{employee.gender}}</td>
+          <td ng-hide="hideGender">{{employee.gender}}</td>
+          <td ng-hide="!hideGender">xxxxxx</td>
           <td ng-show="showRegistration">{{employee.registration}}</td>
           <td><button ng-click='register(employee)'>Change Registeration</button></td>
         </tr>
