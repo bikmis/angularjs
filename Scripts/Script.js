@@ -60,10 +60,8 @@ myModule.controller('myFilter', function ($scope) {
     ) {
       return true;
     }
-
     return false;
   }
-
 })
 
 myModule.filter('salary', function () {
@@ -72,7 +70,6 @@ myModule.filter('salary', function () {
       case (salary <= 100000):
         return 'Too Little';
       case (salary > 100000 && salary <= 500000):
-        console.log('test')
         return 'Moderate Amount';
       case salary > 500000:
         return 'Too Much';
