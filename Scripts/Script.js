@@ -29,6 +29,8 @@ myModule.controller('myEmployee', function ($scope) {
   $scope.register = function (employee) {
     employee.registration = employee.registration === 'Yes' ? employee.registration = 'No' : employee.registration = 'Yes'
   }
+
+  $scope.showRegistration = true;
 })
 
 myModule.controller('myFilter', function ($scope) {
