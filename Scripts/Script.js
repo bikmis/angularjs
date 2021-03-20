@@ -56,7 +56,7 @@ myModule.controller('myFilter', function ($scope) {
     }
 
     if (employee.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||
-        employee.gender.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1
+      employee.gender.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1
     ) {
       return true;
     }
@@ -64,4 +64,18 @@ myModule.controller('myFilter', function ($scope) {
     return false;
   }
 
+})
+
+myModule.filter('salary', function () {
+  return function (salary) {
+    switch (true) {
+      case (salary <= 100000):
+        return 'Too Little';
+      case (salary > 100000 && salary <= 500000):
+        console.log('test')
+        return 'Moderate Amount';
+      case salary > 500000:
+        return 'Too Much';
+    }
+  }
 })

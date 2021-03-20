@@ -35,6 +35,7 @@
       <th ng-click="executeSortColumn('dateOfBirth')">Date Of Birth <div ng-class="[sortColumn == 'dateOfBirth' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'dateOfBirth' && sortColumnOrder == '-'? 'down-arrow' : '']"></div></th>
       <th ng-click="executeSortColumn('gender')">Gender <div ng-class="[sortColumn == 'gender' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'gender' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
       <th ng-click="executeSortColumn('salary')">Original Value <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
+        <th ng-click="executeSortColumn('salary')">Quantity <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
       <th ng-click="executeSortColumn('salary')">Salary <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
       <th ng-click="executeSortColumn('salary')">Number <div ng-class="[sortColumn == 'salary' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'salary' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
     </thead>
@@ -44,6 +45,7 @@
         <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
         <td>{{employee.gender}}</td>
         <td>{{employee.salary}}</td>
+        <td>{{employee.salary | salary}}</td>
         <td>{{employee.salary | currency: "$": 1}}</td>
         <td>{{employee.salary | number: 2}}</td>
       </tr>
