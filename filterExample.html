@@ -30,7 +30,7 @@
   <br>
   <br>
   <table>
-    <thead ng-if="numberOfRows > 0">
+    <thead ng-if="numberOfRows > 0" class="pointer-cursor">
       <th ng-click="executeSortColumn('name')">Name <div ng-class="[sortColumn == 'name' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'name' && sortColumnOrder == '-'? 'down-arrow' : '']"></div></th>
       <th ng-click="executeSortColumn('dateOfBirth')">Date Of Birth <div ng-class="[sortColumn == 'dateOfBirth' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'dateOfBirth' && sortColumnOrder == '-'? 'down-arrow' : '']"></div></th>
       <th ng-click="executeSortColumn('gender')">Gender <div ng-class="[sortColumn == 'gender' && sortColumnOrder == '+'  ? 'up-arrow' : sortColumn == 'gender' && sortColumnOrder == '-'? 'down-arrow' : '']"></th>
