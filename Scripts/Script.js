@@ -31,6 +31,9 @@ myModule.controller('myEmployee', function ($scope) {
   }
 
   $scope.showRegistration = true;
+  $scope.popUp = function(value){
+    alert(value);
+  }
 })
 
 myModule.controller('myFilter', function ($scope) {
