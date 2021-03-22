@@ -38,7 +38,7 @@ myModule.controller('myEmployee', function ($scope, $http, $log) {
   //http GET service call example
   $http({
     Method: 'GET',
-    url: 'https://jsonplaceholder.typicode.com/photosx'
+    url: 'https://jsonplaceholder.typicode.com/photos'
   }).then(function (response) {
     $scope.photos = response.data;
     $log.info(response); // $log.info(response) is the same as console.log(response);
