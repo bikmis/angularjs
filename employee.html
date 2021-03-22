@@ -1,4 +1,5 @@
 <html lang="en" ng-app='myModule' ng-controller='myEmployee'>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,12 +7,14 @@
   <script src='./scripts/angularjs.js'> </script>
   <script src='./scripts/script.js'></script>
   <script src='./scripts/filter.js'></script>
+  <script src='./scripts/httpCall.js'></script>
   <link rel="stylesheet" href="styles/site.css">
   <title>{{title}}</title>
 </head>
+
 <body>
   <h1>{{title}}</h1>
-  <a href="./index.html">Go To Index</a> &nbsp; &nbsp; 
+  <a href="./index.html">Go To Index</a> &nbsp; &nbsp;
   <a href="./filterExample.html">Go To Filter Example</a>
   <br>
   <br>
@@ -25,37 +28,55 @@
   <br>
   <br>
   <h4>List of Employees</h4>
-    <table>
-      <thead>
-        <tr>
-          <th>S.N.</th>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Gender</th>
-          <th ng-show="showRegistration">Registration</th>
-          <th>Register</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat='employee in employees | filter:searchText:exactMatch' ng-init='sn=$index+1'>
-          <td>{{sn}}</td>
-          <td>{{employee.firstname}}</td>
-          <td>{{employee.lastname}}</td>
-          <td ng-hide="hideGender">{{employee.gender}}</td>
-          <td ng-hide="!hideGender">xxxxxx</td>
-          <td ng-show="showRegistration">{{employee.registration}}</td>
-          <td><button ng-click='register(employee)'>Change Registeration</button></td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <br>
-    <h2>ng-init Example:</h2>
-    <input type="text" ng-init="x='Hello There'" value = {{x}}>
-    <button ng-click="popUp(x)">Click me</button>
-    <br>
-    <br>
-    <h2>ng-include Example:</h2>
-    <div ng-include="'name.html'"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>S.N.</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Gender</th>
+        <th ng-show="showRegistration">Registration</th>
+        <th>Register</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='employee in employees | filter:searchText:exactMatch' ng-init='sn=$index+1'>
+        <td>{{sn}}</td>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td ng-hide="hideGender">{{employee.gender}}</td>
+        <td ng-hide="!hideGender">xxxxxx</td>
+        <td ng-show="showRegistration">{{employee.registration}}</td>
+        <td><button ng-click='register(employee)'>Change Registeration</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <h2>ng-init Example:</h2>
+  <input type="text" ng-init="x='Hello There'" value={{x}}>
+  <button ng-click="popUp(x)">Click me</button>
+  <br>
+  <br>
+  <h2>ng-include Example:</h2>
+  <div ng-include="'name.html'"></div>
+  <h2>Http (Get Service) Call</h2>
+  <table>
+    <thead>
+      <th>Album ID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Thumbnail URL</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="photo in photos | limitTo: 3">
+        <td>{{photo.albumId}}</td>
+        <td>{{photo.id}}</td>
+        <td>{{photo.title}}</td>
+        <td><img ng-src={{photo.thumbnailUrl}} alt=""> </td>
+      </tr>
+    </tbody>
+  </table>
 </body>
+
 </html>
