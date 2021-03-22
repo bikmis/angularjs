@@ -17,7 +17,7 @@ myModule.controller('myController', function ($scope) {
   $scope.country = country;
 });
 
-myModule.controller('myEmployee', function ($scope) {
+myModule.controller('myEmployee', function ($scope, $http) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -34,6 +34,11 @@ myModule.controller('myEmployee', function ($scope) {
   $scope.popUp = function(value){
     alert(value);
   }
+
+  $http.get('https://jsonplaceholder.typicode.com/photos')
+  .then(function(response){
+    $scope.photos = response.data;
+  })
 })
 
 myModule.controller('myFilter', function ($scope) {
