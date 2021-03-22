@@ -36,11 +36,16 @@ myModule.controller('myEmployee', function ($scope, $http, $log) {
   }
 
   //http GET service call example
-  $http({ Method: 'GET', url: 'https://jsonplaceholder.typicode.com/photos' })
-    .then(function (response) {
-      $scope.photos = response.data;
-      $log.info(response); // $log.info(response) is the same as console.log(response);
-    })
+  $http({
+    Method: 'GET',
+    url: 'https://jsonplaceholder.typicode.com/photosx'
+  }).then(function (response) {
+    $scope.photos = response.data;
+    $log.info(response); // $log.info(response) is the same as console.log(response);
+  }, function(error){
+    $scope.error = error.data;
+    console.log(error);
+  })
 })
 
 myModule.controller('myFilter', function ($scope) {
