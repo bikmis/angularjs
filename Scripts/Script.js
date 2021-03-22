@@ -17,7 +17,7 @@ myModule.controller('myController', function ($scope) {
   $scope.country = country;
 });
 
-myModule.controller('myEmployee', function ($scope, $http) {
+myModule.controller('myEmployee', function ($scope, $http, $log) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -31,14 +31,16 @@ myModule.controller('myEmployee', function ($scope, $http) {
   }
 
   $scope.showRegistration = true;
-  $scope.popUp = function(value){
+  $scope.popUp = function (value) {
     alert(value);
   }
 
-  $http.get('https://jsonplaceholder.typicode.com/photos')
-  .then(function(response){
-    $scope.photos = response.data;
-  })
+  $http({ Method: 'GET', url: 'https://jsonplaceholder.typicode.com/photos' })
+    .then(function (response) {
+      $scope.photos = response.data;
+      $log.info(response);
+     // console.log(response);
+    })
 })
 
 myModule.controller('myFilter', function ($scope) {
