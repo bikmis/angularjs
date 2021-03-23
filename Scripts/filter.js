@@ -1,4 +1,4 @@
-myModule.filter('salary', function () {
+appModule.filter('salary', function () {
   return function (salary) {
     switch (true) {
       case (salary <= 100000):

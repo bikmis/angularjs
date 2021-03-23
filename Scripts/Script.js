@@ -1,6 +1,6 @@
-var myModule = angular.module('myModule', []);
+var appModule = angular.module('appModule', []);
 
-myModule.controller('myController', function ($scope) {
+appModule.controller('myController', function ($scope) {
   var employee = {
     firstname: 'Sam',
     lastname: 'Smith',
@@ -17,7 +17,7 @@ myModule.controller('myController', function ($scope) {
   $scope.country = country;
 });
 
-myModule.controller('myEmployee', function ($scope, $http, $log) {
+appModule.controller('myEmployee', function ($scope, $http, $log) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -48,7 +48,7 @@ myModule.controller('myEmployee', function ($scope, $http, $log) {
   })
 })
 
-myModule.controller('myFilter', function ($scope) {
+appModule.controller('myFilter', function ($scope) {
   $scope.title = 'Filter Example';
 
   var employees = [
