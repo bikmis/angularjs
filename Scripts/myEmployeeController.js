@@ -1,4 +1,4 @@
-appModule.controller('myEmployeeController', function ($scope, $http, $log) {
+appModule.controller('myEmployeeController', function ($scope, $http, $log, helloService) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -27,4 +27,9 @@ appModule.controller('myEmployeeController', function ($scope, $http, $log) {
     $scope.error = error.data;
     console.log(error);
   })
+
+  $scope.sayHello = function(name){
+    return helloService.sayHello(name);
+  }
+
 })

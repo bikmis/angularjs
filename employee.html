@@ -7,6 +7,7 @@
   <script src='./scripts/angularjs.js'> </script>
   <script src='./scripts/appModule.js'></script>
   <script src='./scripts/myEmployeeController.js'></script>
+  <script src='./scripts/myService.js'></script>
   <script src='./scripts/filter.js'></script>
   <link rel="stylesheet" href="styles/site.css">
   <title>{{title}}</title>
@@ -52,6 +53,8 @@
     </tbody>
   </table>
   <br>
+  <h2>Say Hello Service</h2>
+  <div>{{sayHello('Jack')}}</div>
   <br>
   <h2>ng-init Example:</h2>
   <input type="text" ng-init="x='Hello There'" value={{x}}>
