@@ -17,7 +17,7 @@ appModule.controller('myController', function ($scope) {
   $scope.country = country;
 });
 
-appModule.controller('myEmployee', function ($scope, $http, $log) {
+appModule.controller('myEmployeeController', function ($scope, $http, $log) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -48,7 +48,7 @@ appModule.controller('myEmployee', function ($scope, $http, $log) {
   })
 })
 
-appModule.controller('myFilter', function ($scope) {
+appModule.controller('myFilterController', function ($scope) {
   $scope.title = 'Filter Example';
 
   var employees = [
