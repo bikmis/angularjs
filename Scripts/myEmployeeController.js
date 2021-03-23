@@ -1,4 +1,4 @@
-appModule.controller('myEmployeeController', function ($scope, $http, $log, helloService) {
+appModule.controller('myEmployeeController', function ($scope, $http, $log, helloService, $location, $anchorScroll) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -30,6 +30,12 @@ appModule.controller('myEmployeeController', function ($scope, $http, $log, hell
 
   $scope.sayHello = function(name){
     return helloService.sayHello(name);
+  }
+
+  $scope.scrollTo = function(scrollLocation) {
+    $location.hash(scrollLocation);
+    $anchorScroll.yOffset = 20;
+    $anchorScroll();
   }
 
 })

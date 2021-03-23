@@ -14,9 +14,12 @@
 </head>
 
 <body>
-  <h1>{{title}}</h1>
+  <h1 id="top">{{title}}</h1>
   <a href="./index.html">Go To Index</a> &nbsp; &nbsp;
   <a href="./filterSortingExample.html">Go To Filter & Sorting Example</a>
+  <br>
+  <br>
+  <button ng-click="scrollTo('bottom')">Go to the bottom of the page</button>
   <br>
   <br>
   <label for="search">Search firstname:</label>
@@ -81,6 +84,9 @@
       </tr>
     </tbody>
   </table>
+
+  <p id="bottom">This is the bottom of the page. <button ng-click="scrollTo('top')">Go to the top of the page</button></p>
+
 </body>
 
 </html>
