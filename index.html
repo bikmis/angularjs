@@ -1,40 +1,31 @@
-<html lang='en' ng-app='appModule' ng-controller='myController'>
-
+<html lang='en' ng-app='appModule'>
 <head>
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js'></script> -->
+
   <!--Uncompressed angularjs shows errors in a more readable format-->
-  <script src='./scripts/angularjs.js'> </script>
-  <script src='./scripts/appModule.js'></script>
-  <script src='./scripts/myController.js'></script>
-  <script src='./scripts/filter.js'></script>
+  <script src="./scripts/angularjs.js"> </script>
+  <script src="./scripts/angular-route.js"> </script>
+  <script src="./scripts/appModule.js"></script>
+  <script src="./scripts/homeController.js"></script>
+  <script src="./scripts/employeeController.js"></script>
+  <script src="./scripts/employee_2_Controller.js"></script>
+  <script src="./scripts/myService.js"></script>
+  <script src="./scripts/filter.js"></script>
   <link rel="stylesheet" href="styles/site.css">
   <title>{{title}}</title>
+  <base href="/" />
 </head>
 
 <body>
-  <h1>{{title}}</h1>
-  <a href="./employee.html">Go To Employee</a> &nbsp;&nbsp;&nbsp;
-  <a href="./filterSortingExample.html">Go To Filter & Sorting Example</a>
-  <br>
-  <br>
-  <label for=''>Name:</label>
-  <input type='text' ng-model='employee.firstname' placeholder='Enter a name here'>
-  <h1>Hello {{firstname}}</h1>
-  <div>10+20 = {{10+20}}</div>
-  <div>{{ 1 === 1}}</div>
-  <div> {{ {name: 'David', age: '25'}.name}} </div>
-  <div>{{['David', 'Sunny', 'Patric'][2]}}</div>
-  <div>Lastname: {{ employee.lastname }} | Firstname: {{employee.firstname}} | Gender: {{employee.gender}}</div>
-  <br>
-  <br>
-  <div>
-    <div>{{country.name}}</div>
-    <div>{{country.capital}}</div>
-    <img ng-src='{{country.flag}}' style='height: 100px; width:200px;' alt='{{country.flag + ' flag'}}' />
-  </div>
+  <a href="home">Home</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="employee">Employee</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="filterSortingExample">Filter and Sorting Example</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ng-view></ng-view>
 </body>
 
 </html>

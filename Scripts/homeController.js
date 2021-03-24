@@ -1,4 +1,4 @@
-appModule.controller('myController', function ($scope) {
+appModule.controller('homeController', function ($scope) {
   var employee = {
     firstname: 'Sam',
     lastname: 'Smith',

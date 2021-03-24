@@ -1,4 +1,4 @@
-appModule.controller('myEmployeeController', function ($scope, $http, $log, helloService, $location, $anchorScroll) {
+appModule.controller('employeeController', function ($scope, $http, $log, helloService, $location, $anchorScroll) {
   $scope.title = 'Employee';
   var employees = [
     { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },

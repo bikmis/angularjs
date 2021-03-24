@@ -1,4 +1,4 @@
-appModule.controller('myEmployee_2_Controller', function ($scope) {
+appModule.controller('employee_2_Controller', function ($scope) {
   $scope.title = 'Filter Example';
 
   var employees = [

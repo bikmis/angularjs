@@ -1,24 +1,4 @@
-<html lang="en" ng-app='appModule' ng-controller='myEmployeeController'>
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src='./scripts/angularjs.js'> </script>
-  <script src='./scripts/appModule.js'></script>
-  <script src='./scripts/myEmployeeController.js'></script>
-  <script src='./scripts/myService.js'></script>
-  <script src='./scripts/filter.js'></script>
-  <link rel="stylesheet" href="styles/site.css">
-  <title>{{title}}</title>
-</head>
-
-<body>
-  <h1 id="top">{{title}}</h1>
-  <a href="./index.html">Go To Index</a> &nbsp; &nbsp;
-  <a href="./filterSortingExample.html">Go To Filter & Sorting Example</a>
-  <br>
-  <br>
+  <h1 id="top">{{title}}</h1> 
   <button ng-click="scrollTo('bottom')">Go to the bottom of the page</button>
   <br>
   <br>
@@ -65,7 +45,7 @@
   <br>
   <br>
   <h2>ng-include Example:</h2>
-  <div ng-include="'name.html'"></div>
+  <div ng-include="'templates/name.html'"></div>
   <h2>Http GET Service Example</h2>
   <div>{{error}}</div>
   <table>
@@ -86,7 +66,3 @@
   </table>
 
   <p id="bottom">This is the bottom of the page. <button ng-click="scrollTo('top')">Go to the top of the page</button></p>
-
-</body>
-
-</html>
