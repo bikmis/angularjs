@@ -13,6 +13,9 @@ var appModule = angular.module('appModule', ['ngRoute'])
         templateUrl: 'templates/filterSortingExample.html',
         controller: 'employee_2_Controller'
       })
+      .otherwise({
+        redirectTo: '/home' //default route, http://127.0.0.1:5500/home and http://127.0.0.1:5500 open the home page(/home)
+      })
     $locationProvider.html5Mode(true);
   })
   
