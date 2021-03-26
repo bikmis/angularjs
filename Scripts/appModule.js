@@ -26,6 +26,11 @@ var appModule = angular.module('appModule', ['ngRoute'])
         controller: 'studentController',
         title: 'Student Detail'
       })
+      .when('/add-student-form', {
+        templateUrl: 'templates/addStudentForm.html',
+        controller: 'addStudentFormController',
+        title: 'Add Student Form'
+      })
       .otherwise({
         redirectTo: '/home' //default route, http://127.0.0.1:5500/home and http://127.0.0.1:5500 open the home page(/home)
       })

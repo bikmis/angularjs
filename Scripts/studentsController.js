@@ -1,4 +1,8 @@
-appModule.controller('studentsController', function ($scope, $location) {
+appModule.controller('studentsController', function ($scope, $location, $routeParams) {
+  init = function(){
+    saveStudent();
+  };
+
   var students = [
     { id: 1, firstName: 'Jack', lastName: 'Smith', dob: '01/12/1980', gender: 'M', address: '1243 Manassas Dr, Manassas VA 20111' },
     { id: 2, firstName: 'Emma', lastName: 'William', dob: '03/16/1972', gender: 'F', address: '7843 Faifax St, Falls Church VA 22042' },
@@ -19,4 +23,17 @@ appModule.controller('studentsController', function ($scope, $location) {
     $scope.students = students;
   }
 
+  $scope.addStudentForm = function(){
+    $location.path('add-student-form');
+  }
+
+  saveStudent = function(){
+    if($routeParams.student != undefined){
+      var student = $routeParams.student;
+      $scope.students.push(student);
+    }
+  };
+
+  init();
+  
 })
