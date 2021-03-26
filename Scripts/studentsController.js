@@ -9,7 +9,6 @@ appModule.controller('studentsController', function ($scope, $location) {
   $scope.students = students;
   $scope.detailStudent = function(id){
     var student = students.find(s => s.id === id);
-    console.log(student);
     $location.path('student/'+id).search('student', student);
   }
 })
