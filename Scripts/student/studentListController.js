@@ -1,4 +1,6 @@
-appModule.controller('studentListController', function ($scope, $location, $routeParams, $route) {
+appModule.controller('studentListController', function ($rootScope, $scope, $location, $routeParams, $route) {
+  $rootScope.footer = 'This is a value of a property "footer" on $rootScope object in "studentListController" and it is available in all controllers. In the index.html this file should be referenced above other script files';
+
   init = function(){
     saveStudent();
   };
