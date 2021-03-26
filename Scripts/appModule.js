@@ -17,17 +17,17 @@ var appModule = angular.module('appModule', ['ngRoute'])
         title: 'Filter & Sorting'
       })
       .when('/students', {
-        templateUrl: 'templates/students.html',
+        templateUrl: 'templates/student/students.html',
         controller: 'studentsController',
         title: 'List of Students'
       })
       .when('/student/:id', {
-        templateUrl: 'templates/student.html',
+        templateUrl: 'templates/student/student.html',
         controller: 'detailStudentController',
         title: 'Student Detail'
       })
       .when('/add-student-form', {
-        templateUrl: 'templates/addStudentForm.html',
+        templateUrl: 'templates/student/addStudentForm.html',
         controller: 'addStudentFormController',
         title: 'Add Student Form'
       })
