@@ -23,7 +23,7 @@ var appModule = angular.module('appModule', ['ngRoute'])
       })
       .when('/student/:id', {
         templateUrl: 'templates/student.html',
-        controller: 'studentController',
+        controller: 'detailStudentController',
         title: 'Student Detail'
       })
       .when('/add-student-form', {
