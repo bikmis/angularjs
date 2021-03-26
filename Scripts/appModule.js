@@ -18,8 +18,13 @@ var appModule = angular.module('appModule', ['ngRoute'])
       })
       .when('/students', {
         templateUrl: 'templates/students.html',
-        controller: 'studentController',
+        controller: 'studentsController',
         title: 'List of Students'
+      })
+      .when('/student/:id', {
+        templateUrl: 'templates/student.html',
+        controller: 'studentController',
+        title: 'Student Detail'
       })
       .otherwise({
         redirectTo: '/home' //default route, http://127.0.0.1:5500/home and http://127.0.0.1:5500 open the home page(/home)

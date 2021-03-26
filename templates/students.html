@@ -1,3 +1,5 @@
+<h1>List of Students</h1>
+
 <table>
   <thead>
     <th>Id</th>
@@ -10,7 +12,7 @@
       <td>{{student.id}}</td>
       <td>{{student.firstName}}</td>
       <td>{{student.lastName}}</td>
-      <td><button>Detail</button></td>
+      <td><button ng-click="detailStudent(student.id)">Detail</button></td>
     </tr>
   </tbody>
 </table>
