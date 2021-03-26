@@ -11,4 +11,12 @@ appModule.controller('studentsController', function ($scope, $location) {
     var student = students.find(s => s.id === id);
     $location.path('student/'+id).search('student', student);
   }
+
+  $scope.deleteStudent = function(id){
+    var student = students.find(s => s.id === id);
+    var studentIndex = students.indexOf(student);
+    students.splice(studentIndex, 1);
+    $scope.students = students;
+  }
+
 })
