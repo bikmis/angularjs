@@ -1,4 +1,4 @@
-appModule.controller('studentListController', function ($scope, $location, $routeParams) {
+appModule.controller('studentListController', function ($scope, $location, $routeParams, $route) {
   init = function(){
     saveStudent();
   };
@@ -33,6 +33,10 @@ appModule.controller('studentListController', function ($scope, $location, $rout
       $scope.students.push(student);
     }
   };
+
+  $scope.reload = function(){
+    $route.reload();
+  }
 
   init();
   
