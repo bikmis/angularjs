@@ -1,4 +1,4 @@
-appModule.controller('studentsController', function ($scope, $location, $routeParams) {
+appModule.controller('studentListController', function ($scope, $location, $routeParams) {
   init = function(){
     saveStudent();
   };

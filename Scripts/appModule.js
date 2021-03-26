@@ -17,12 +17,12 @@ var appModule = angular.module('appModule', ['ngRoute'])
         title: 'Filter & Sorting'
       })
       .when('/students', {
-        templateUrl: 'templates/student/students.html',
-        controller: 'studentsController',
+        templateUrl: 'templates/student/studentList.html',
+        controller: 'studentListController',
         title: 'List of Students'
       })
       .when('/student/:id', {
-        templateUrl: 'templates/student/student.html',
+        templateUrl: 'templates/student/detailStudent.html',
         controller: 'detailStudentController',
         title: 'Student Detail'
       })
