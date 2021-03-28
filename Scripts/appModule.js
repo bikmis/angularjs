@@ -21,6 +21,18 @@ var appModule = angular.module('appModule', ['ngRoute'])
         templateUrl: 'templates/student/studentList.html',
         controller: 'studentListController',
         title: 'List of Students'
+        /*
+        resolve property is used to navigate to this route only after the promise is resolved.
+        resolve: {
+          studentList: function($http) {
+            return $http.get('StudentService.asmx/GetStudents')
+                        .then(function (response){
+                          return response.data;
+                        })
+          }
+        }
+        and in the studentListController, inject studentList and set students to studentList
+        */
       })
       .when('/student/:id', {
         templateUrl: 'templates/student/detailStudent.html',
