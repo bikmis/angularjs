@@ -1,11 +1,16 @@
-appModule.factory('helloService', function () {
-  return {
-    sayHello: function (name) {
-      if (!name) {
-        return 'Enter Name';
-      }
+(function () {
+  var appModule = angular.module('appModule');
 
-      return 'Hello ' + name;
+  appModule.factory('helloService', function () {
+    return {
+      sayHello: function (name) {
+        if (!name) {
+          return 'Enter Name';
+        }
+
+        return 'Hello ' + name;
+      }
     }
-  }
-})
+  })
+
+}())
