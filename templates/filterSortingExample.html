@@ -45,7 +45,7 @@ Number Of Rows:<input type="number" step='1' min="0" max="3" ng-model="numberOfR
       <td>{{employee.dateOfBirth | date: "MMMM/dd/yyyy"}}</td>
       <td>{{employee.gender}}</td>
       <td>{{employee.salary}}</td>
-      <td>{{employee.salary | salary}}</td>
+      <td>{{employee.salary | salaryFilter}}</td>
       <td>{{employee.salary | currency: "$": 1}}</td>
       <td>{{employee.salary | number: 2}}</td>
     </tr>

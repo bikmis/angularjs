@@ -1,7 +1,5 @@
 (function(){
-    var appModule = angular.module('appModule');
-
-    appModule.controller('employee_2_Controller', function ($scope) {
+     var employee_2_Controller = function ($scope) {
       $scope.title = 'Filter Example';
     
       var employees = [
@@ -32,6 +30,9 @@
         }
         return false;
       }
-    })
+    }
+
+    var appModule = angular.module('appModule');
+    appModule.controller('employee_2_Controller',employee_2_Controller);
 }())
 

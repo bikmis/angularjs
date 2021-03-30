@@ -1,6 +1,5 @@
 (function () {
-  var appModule = angular.module('appModule');
-  appModule.controller('homeController', function ($scope) {
+   var homeController = function ($scope) {
     var employee = {
       firstname: 'Sam',
       lastname: 'Smith',
@@ -15,5 +14,8 @@
       flag: '/images/usaFlag.png'
     }
     $scope.country = country;
-  });
+  };
+
+  var appModule = angular.module('appModule');
+  appModule.controller('homeController', homeController);
 }());

@@ -1,7 +1,5 @@
 (function () {
-  var appModule = angular.module('appModule');
-
-  appModule.filter('salary', function () {
+ var salaryFilter = function () {
     return function (salary) {
       switch (true) {
         case (salary <= 100000):
@@ -12,6 +10,8 @@
           return 'Too Much';
       }
     }
-  })
+  }
 
+  var appModule = angular.module('appModule');
+  appModule.filter('salaryFilter', salaryFilter);
 }())
