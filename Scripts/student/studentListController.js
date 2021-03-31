@@ -58,6 +58,6 @@
   }
 
   var appModule = angular.module('appModule');
-  appModule.controller('studentListController', studentListController);
+  appModule.controller('studentListController', ['$rootScope', '$scope', '$location', '$routeParams', '$route', studentListController]);
 
 }());

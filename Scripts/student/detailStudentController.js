@@ -6,6 +6,6 @@
   }
 
   var appModule = angular.module('appModule');
-  appModule.controller('detailStudentController', detailStudentController);
+  appModule.controller('detailStudentController', ['$scope', '$routeParams', detailStudentController]);
 }())
 

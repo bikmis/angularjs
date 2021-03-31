@@ -43,6 +43,6 @@
   }
 
   var appModule = angular.module('appModule');
-  appModule.controller('employeeController', employeeController);
+  appModule.controller('employeeController', ['$scope', '$http', '$log', 'helloService', '$location', '$anchorScroll', employeeController]);
 }())
 

@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-   var homeController = function ($scope) {
+  var homeController = function ($scope) {
     var employee = {
       firstname: 'Sam',
       lastname: 'Smith',
@@ -18,5 +18,5 @@
   };
 
   var appModule = angular.module('appModule');
-  appModule.controller('homeController', homeController);
+  appModule.controller('homeController', ['$scope', homeController]);
 }());
