@@ -58,6 +58,7 @@
   }
 
   var appModule = angular.module('appModule');
+  //'$rootScope', '$scope', '$location', '$routeParams', and '$route' are passed into the array for minification purpose
   appModule.controller('studentListController', ['$rootScope', '$scope', '$location', '$routeParams', '$route', studentListController]);
 
 }());

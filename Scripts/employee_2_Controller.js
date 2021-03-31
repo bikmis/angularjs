@@ -34,6 +34,7 @@
   }
 
   var appModule = angular.module('appModule');
+  //'$scope' is passed into the array for minification purpose
   appModule.controller('employee_2_Controller', ['$scope', employee_2_Controller]);
 }())
 

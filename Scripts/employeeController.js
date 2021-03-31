@@ -43,6 +43,7 @@
   }
 
   var appModule = angular.module('appModule');
+  //'$scope', '$http', '$log', 'helloService', '$location', and '$anchorScroll' are passed into the array for minification purpose
   appModule.controller('employeeController', ['$scope', '$http', '$log', 'helloService', '$location', '$anchorScroll', employeeController]);
 }())
 

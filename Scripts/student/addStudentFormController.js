@@ -11,6 +11,6 @@
   }
   //getter module function
   var appModule = angular.module('appModule');
-  //$scope and $location is passed into the array for minification purpose
+  //$scope and $location are passed into the array for minification purpose
   appModule.controller('addStudentFormController', ['$scope', '$location', addStudentFormController])
 }())

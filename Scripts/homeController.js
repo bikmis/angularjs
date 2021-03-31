@@ -18,5 +18,6 @@
   };
 
   var appModule = angular.module('appModule');
+  //'$scope' is passed into the array for minification purpose
   appModule.controller('homeController', ['$scope', homeController]);
 }());

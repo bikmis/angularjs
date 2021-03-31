@@ -6,6 +6,7 @@
   }
 
   var appModule = angular.module('appModule');
+  //$scope and $routeParams are passed into the array for minification purpose
   appModule.controller('detailStudentController', ['$scope', '$routeParams', detailStudentController]);
 }())
 
