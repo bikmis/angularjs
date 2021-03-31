@@ -1,5 +1,6 @@
 //iife - immediately invoked function expression
 (function () {
+                  //setter module method with ngRoute being injected
   var appModule = angular.module('appModule', ['ngRoute'])
     .config(function ($routeProvider, $locationProvider) {
       $routeProvider.caseInsensitiveMatch = true;

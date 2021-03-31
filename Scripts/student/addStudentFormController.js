@@ -8,7 +8,7 @@
       $location.path('students');
     }
   }
-
+  //getter module function
   var appModule = angular.module('appModule');
   appModule.controller('addStudentFormController', addStudentFormController)
 }())
