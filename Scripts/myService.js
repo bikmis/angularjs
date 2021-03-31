@@ -1,4 +1,5 @@
 (function () {
+  "use strict";
   var helloService = function () {
     var sayHello = function (name) {
       if (!name) {

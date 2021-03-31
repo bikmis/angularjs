@@ -1,8 +1,9 @@
 (function () {
+  "use strict";
   var studentListController = function ($rootScope, $scope, $location, $routeParams, $route) {
     $rootScope.footer = 'This is a value of a property "footer" on $rootScope object in "studentListController" and it is available in all controllers. In the index.html this file should be referenced above other script files';
 
-    init = function () {
+    var init = function () {
       saveStudent();
     };
 
@@ -30,7 +31,7 @@
       $location.path('add-student-form');
     }
 
-    saveStudent = function () {
+    var saveStudent = function () {
       if ($routeParams.student != undefined) {
         var student = $routeParams.student;
         $scope.students.push(student);

@@ -1,4 +1,5 @@
 (function () {
+  "use strict";
    var homeController = function ($scope) {
     var employee = {
       firstname: 'Sam',

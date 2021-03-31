@@ -1,4 +1,5 @@
 (function(){
+  "use strict";
      var employee_2_Controller = function ($scope) {
       $scope.title = 'Filter Example';
     

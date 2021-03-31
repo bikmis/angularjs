@@ -1,4 +1,5 @@
 (function () {
+  "use strict";
   var employeeController = function ($scope, $http, $log, helloService, $location, $anchorScroll) {
     $scope.title = 'Employee';
     var employees = [

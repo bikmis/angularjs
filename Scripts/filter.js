@@ -1,4 +1,5 @@
 (function () {
+  "use strict";
  var salaryFilter = function () {
     return function (salary) {
       switch (true) {
