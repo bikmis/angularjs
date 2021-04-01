@@ -34,7 +34,7 @@
   }
 
   var appModule = angular.module('appModule');
-  //'$scope' is passed into the array for minification purpose
+  //'$scope' is passed into the array for minification purpose. This is sometimes called a min-safe array.
   appModule.controller('employee_2_Controller', ['$scope', employee_2_Controller]);
 }())
 

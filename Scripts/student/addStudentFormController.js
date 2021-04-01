@@ -11,6 +11,6 @@
   }
   //getter module function
   var appModule = angular.module('appModule');
-  //$scope and $location are passed into the array for minification purpose
+  //$scope and $location are passed into the array for minification purpose. This is sometimes called a min-safe array.
   appModule.controller('addStudentFormController', ['$scope', '$location', addStudentFormController])
 }())
