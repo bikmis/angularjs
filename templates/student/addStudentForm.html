@@ -3,14 +3,14 @@
   <table>
     <tr>
       <td>ID</td>
-      <td><input type="text" name="studentId" ng-model="student.id" required></td>
+      <td><input type="text" name="studentId" ng-model="student.id" required ng-class="{'has-error': studentForm.studentId.$invalid && studentForm.$submitted }"></td>
       <td style="border: 0" ng-if="studentForm.$submitted">
           <div ng-show="studentForm.studentId.$error.required" style="color: red;">This is a required field.</div>
       </td>
     </tr>
     <tr>
       <td>First Name</td>
-      <td><input type="text" name="studentName" ng-model="student.firstName" required></td>
+      <td><input type="text" name="studentName" ng-model="student.firstName" required ng-class="{'has-error': studentForm.studentName.$invalid && studentForm.$submitted }"></td>
       <td style="border: 0" ng-if="studentForm.$submitted">
         <div ng-show="studentForm.studentName.$error.required" style="color: red;">This is a required field.</div>
     </td>

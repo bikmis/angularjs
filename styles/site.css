@@ -23,3 +23,7 @@ td, th {
   border-bottom: 10px solid black;
   display: inline-block;
 }
+
+.has-error {
+  background-color: red;
+}
