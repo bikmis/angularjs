@@ -1,35 +1,45 @@
-<h1>Add Student</h1>
-<table>
-  <tr>
-    <td>ID</td>
-    <td><input type="text" ng-model="student.id"></td>
-  </tr>
-  <tr>
-    <td>First Name</td>
-    <td><input type="text" ng-model="student.firstName"></td>
-  </tr>
-  <tr>
-    <td>Last Name</td>
-    <td><input type="text" ng-model="student.lastName"></td>
-  </tr>
-  <tr>
-    <td>DOB</td>
-    <td><input type="text" ng-model="student.dob"></td>
-  </tr>
-  <tr>
-    <td>Gender</td>
-    <td><input type="text" ng-model="student.gender"></td>
-  </tr>
-  <tr>
-    <td>Address</td>
-    <td><input type="text" ng-model="student.address"></td>
-  </tr>
-</table>
-<br>
-<br>
-<button ng-click="saveStudent(student)">Add</button>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<button ng-click="saveStudent(student)">Go Back to Student List</button>
-<br>
-<br>
-Footer: {{footer}}
+<form name="studentForm" novalidate>
+  <h1>Add Student</h1>
+  <table>
+    <tr>
+      <td>ID</td>
+      <td><input type="text" name="studentId" ng-model="student.id" required></td>
+      <td style="border: 0" ng-if="studentForm.$submitted">
+          <div ng-show="studentForm.studentId.$error.required" style="color: red;">This is a required field.</div>
+      </td>
+    </tr>
+    <tr>
+      <td>First Name</td>
+      <td><input type="text" name="studentName" ng-model="student.firstName" required></td>
+      <td style="border: 0" ng-if="studentForm.$submitted">
+        <div ng-show="studentForm.studentName.$error.required" style="color: red;">This is a required field.</div>
+    </td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><input type="text" ng-model="student.lastName"></td>
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><input type="text" ng-model="student.dob"></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><input type="text" ng-model="student.gender"></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><input type="text" ng-model="student.address"></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <input type="submit" ng-click="saveStudent(studentForm)" value="Add">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="button" ng-click="goBackToStudentList()" value="Go Back to Student List">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="button" ng-click="resetForm(studentForm)" value="Reset Form">
+  <br>
+  <br>
+  Footer: {{footer}}
+</form>

@@ -1,12 +1,19 @@
 (function () {
   "use strict";
   var addStudentFormController = function ($scope, $location) {
-    $scope.saveStudent = function (student) {
-      $location.path('students').search({ 'student': student });
+    $scope.saveStudent = function (studentForm) {
+      if(studentForm.$valid){
+        $location.path('students').search({ 'student': $scope.student });
+      }
     }
 
     $scope.goBackToStudentList = function () {
       $location.path('students');
+    }
+
+    $scope.resetForm = function(studentForm){
+      studentForm.$setPristine();
+      studentForm.$setUntouched();
     }
   }
   //getter module function
