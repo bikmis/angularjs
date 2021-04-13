@@ -2,17 +2,16 @@ describe('employeeController', function () {
 
   beforeEach(module("appModule"));
 
-  var $controller, $rootScope, helloService, $scope;
+  var $controller, helloService, $scope;
 
   //appModule.js, employeeController.js, and helloService.js need to be referenced in SpecRunner.html
-  beforeEach(inject(function (_$controller_, _$rootScope_, _helloService_) {
+  beforeEach(inject(function (_$controller_, _helloService_) {
     $controller = _$controller_;
-    $rootScope = _$rootScope_;
     helloService = _helloService_;
   }))
 
   beforeEach(function(){
-    $scope = $rootScope.$new();
+    $scope = {};
     $controller('employeeController', { $scope: $scope });
   })
 
