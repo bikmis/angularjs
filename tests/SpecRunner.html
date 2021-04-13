@@ -7,16 +7,16 @@
   <link rel="shortcut icon" type="image/png" href="../scripts/jasmine-standalone-3.7.1/jasmine_favicon.png">
   <link rel="stylesheet" href="../scripts/jasmine-standalone-3.7.1/jasmine.css">
 
+  <!-- Put Jasmine libraries before angular libraries. Otherwise it does not work. -->
+  <script src="../scripts/jasmine-standalone-3.7.1/jasmine.js"></script>
+  <script src="../scripts/jasmine-standalone-3.7.1/jasmine-html.js"></script>
+  <script src="../scripts/jasmine-standalone-3.7.1/boot.js"></script>
+
   <!-- angular libraries -->
   <script src="../scripts/angular/angularjs.js"> </script>
   <script src="../scripts/angular/angular-resource.js"> </script>
   <script src="../scripts/angular/angular-route.js"> </script>
   <script src="../scripts/angular/angular-mocks.js"> </script>
-
-  <!-- jasmine libraries -->
-  <script src="../scripts/jasmine-standalone-3.7.1/jasmine.js"></script>
-  <script src="../scripts/jasmine-standalone-3.7.1/jasmine-html.js"></script>
-  <script src="../scripts/jasmine-standalone-3.7.1/boot.js"></script>
 
   <!-- include source files here... -->
   <script src="../src/appModule.js"></script>
