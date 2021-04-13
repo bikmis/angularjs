@@ -40,6 +40,10 @@
       $anchorScroll();
     }
 
+    $scope.add = function(x, y) {
+      return x + y;
+    };
+
   }
 
   var appModule = angular.module('appModule');
