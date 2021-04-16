@@ -22,7 +22,7 @@
           title: 'Filter & Sorting'
         })
         .when('/Students', {
-          templateUrl: 'templates/student/studentList.html',
+          templateUrl: 'src/student/studentList.html',
           controller: 'studentListController',
           title: 'List of Students'
           /*
@@ -39,12 +39,12 @@
           */
         })
         .when('/student/:id', {
-          templateUrl: 'templates/student/detailStudent.html',
+          templateUrl: 'src/student/detailStudent.html',
           controller: 'detailStudentController',
           title: 'Student Detail'
         })
         .when('/add-student-form', {
-          templateUrl: 'templates/student/addStudentForm.html',
+          templateUrl: 'src/student/addStudentForm.html',
           controller: 'addStudentFormController',
           title: 'Add Student Form'
         })
