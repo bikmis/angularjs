@@ -7,7 +7,7 @@
       $routeProvider.caseInsensitiveMatch = true;
       $routeProvider
         .when('/home', {
-          templateUrl: 'templates/home.html',
+          templateUrl: 'src/home/home.html',
           controller: 'homeController',
           title: 'Home'
         })
