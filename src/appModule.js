@@ -12,7 +12,7 @@
           title: 'Home'
         })
         .when('/employee', {
-          templateUrl: 'templates/employee.html',
+          templateUrl: 'src/employee/employee.html',
           controller: 'employeeController',
           title: 'Employee'
         })
