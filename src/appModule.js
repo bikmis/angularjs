@@ -17,7 +17,7 @@
           title: 'Employee'
         })
         .when('/filterSortingExample', {
-          templateUrl: 'templates/filterSortingExample.html',
+          templateUrl: 'src/filterAndSorting/filterSortingExample.html',
           controller: 'employee_2_Controller',
           title: 'Filter & Sorting'
         })
