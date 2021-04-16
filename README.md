@@ -6,7 +6,6 @@ We will learn the following:
  - Data Binding
  - Controller
  - Directives
- - Deep Linking
  - Form Validation
  - Server Communication
  - Dependency injection
