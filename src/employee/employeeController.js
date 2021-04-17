@@ -19,7 +19,7 @@
     }
 
     //http GET service call example
-    photoService.photos.then(function (response) {
+    photoService.getPhoto.then(function (response) {
       $scope.photos = response.data;
       $log.info(response); // $log.info(response) is the same as console.log(response);
     }, function (error) {

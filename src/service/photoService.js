@@ -1,17 +1,17 @@
 (function () {
   "use strict";
 
-  var photos = function ($http) {
-    var photoPromise = $http({
+  var photoFunc = function ($http) {
+    var getPhoto = $http({
       Method: 'GET',
       url: 'https://jsonplaceholder.typicode.com/photos'
     })
 
     return {
-      photos: photoPromise
+      getPhoto: getPhoto
     }
   }
 
   var appModule = angular.module('appModule');
-  appModule.factory('photoService', photos);
+  appModule.factory('photoService', photoFunc);
 }())

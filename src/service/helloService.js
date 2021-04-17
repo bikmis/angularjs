@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var hello = function () {
+  var helloFunc = function () {
     var sayHello = function (name) {
       if (!name) {
         return 'Enter Name';
@@ -15,5 +15,5 @@
   }
 
   var appModule = angular.module('appModule');
-  appModule.factory('helloService', hello);
+  appModule.factory('helloService', helloFunc);
 }())
