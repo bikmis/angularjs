@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var employeeController = function ($scope, $http, $log, helloService, $location, $anchorScroll) {
+  var employeeController = function ($scope, $log, helloService, photoService, $location, $anchorScroll) {
     $scope.title = 'Employee';
     var employees = [
       { firstname: 'Jack', lastname: 'Poly', gender: 'Male', registration: 'No' },
@@ -19,16 +19,13 @@
     }
 
     //http GET service call example
-    $http({
-      Method: 'GET',
-      url: 'https://jsonplaceholder.typicode.com/photos'
-    }).then(function (response) {
+    photoService.then(function (response) {
       $scope.photos = response.data;
       $log.info(response); // $log.info(response) is the same as console.log(response);
     }, function (error) {
       $scope.error = error.data;
       console.log(error);
-    })
+    });
 
     $scope.sayHello = function (name) {
       return helloService.sayHello(name);
@@ -47,7 +44,7 @@
   }
 
   var appModule = angular.module('appModule');
-  //'$scope', '$http', '$log', 'helloService', '$location', and '$anchorScroll' are passed into the array for minification purpose. This is sometimes called a min-safe array.
-  appModule.controller('employeeController', ['$scope', '$http', '$log', 'helloService', '$location', '$anchorScroll', employeeController]);
+  //'$scope', '$log', 'helloService', '$location', and '$anchorScroll' are passed into the array for minification purpose. This is sometimes called a min-safe array.
+  appModule.controller('employeeController', ['$scope', '$log', 'helloService', 'photoService', '$location', '$anchorScroll', employeeController]);
 }())
 
