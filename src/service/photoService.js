@@ -13,5 +13,5 @@
   }
 
   var appModule = angular.module('appModule');
-  appModule.factory('photoService', photoFunc);
+  appModule.factory('photoService', ['$http', photoFunc]);
 }())
