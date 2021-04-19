@@ -31,20 +31,21 @@
 </head>
 
 <body>
-  <div ng-controller="menuController">
-    <a href="home" ng-class="{'active-menu': changeMenuColor('/home')}">Home</a>
+  <div class="margin-25">
+    <div ng-controller="menuController">
+      <a href="home" ng-class="{'active-menu': changeMenuColor('/home')}">Home</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="employee" ng-class="{'active-menu': changeMenuColor('/employee')}">Employee</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="filterSortingExample" ng-class="{'active-menu': changeMenuColor('/filterSortingExample')}">Filter and
+        Sorting Example</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="students" ng-class="{'active-menu': changeMenuColor('/students')}">List of Students</a>
+    </div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="employee" ng-class="{'active-menu': changeMenuColor('/employee')}">Employee</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="filterSortingExample" ng-class="{'active-menu': changeMenuColor('/filterSortingExample')}">Filter and Sorting Example</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="students" ng-class="{'active-menu': changeMenuColor('/students')}">List of Students</a>
+    <br>
+    <ng-view></ng-view>
   </div>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br>
-  <br>
-  <br>
-  <ng-view></ng-view>
 </body>
 
 </html>
