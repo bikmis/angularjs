@@ -30,4 +30,8 @@ td, th {
 
 .active-menu {
   color: red;
+  background-color: lightgray;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding:5px;
 }
