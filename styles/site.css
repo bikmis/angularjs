@@ -27,3 +27,7 @@ td, th {
 .has-error {
   background-color: red;
 }
+
+.active-menu {
+  color: red;
+}
