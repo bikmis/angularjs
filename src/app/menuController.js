@@ -7,5 +7,5 @@
   };
 
   var appModule = angular.module("appModule");
-  appModule.controller("menuController", menuController)
+  appModule.controller("menuController", ['$scope','$location',menuController])
 }())
