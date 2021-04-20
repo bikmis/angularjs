@@ -6,6 +6,8 @@
     }
   };
 
+  menuController.$inject = ['$scope','$location'];
+
   var appModule = angular.module("appModule");
-  appModule.controller("menuController", ['$scope','$location',menuController])
+  appModule.controller("menuController", menuController)
 }())
