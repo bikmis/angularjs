@@ -1,11 +1,11 @@
 (function(){
   "use strict";
-  var menuFunc = function($scope, $location){
+  var menuController = function($scope, $location){
     $scope.changeMenuColor = function(path){
       return $location.path()==path;
     }
   };
 
   var appModule = angular.module("appModule");
-  appModule.controller("menuController", menuFunc)
+  appModule.controller("menuController", menuController)
 }())
