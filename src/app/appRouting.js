@@ -8,22 +8,22 @@
       $routeProvider
         .when('/home', {
           templateUrl: 'src/home/home.html',
-          controller: 'homeController',
+          controller: 'HomeController',
           title: 'Home'
         })
         .when('/employee', {
           templateUrl: 'src/employee/employee.html',
-          controller: 'employeeController',
+          controller: 'EmployeeController',
           title: 'Employee'
         })
         .when('/filterSortingExample', {
           templateUrl: 'src/filterAndSorting/filterSortingExample.html',
-          controller: 'employee_2_Controller',
+          controller: 'Employee_2_Controller',
           title: 'Filter & Sorting'
         })
         .when('/Students', {
           templateUrl: 'src/student/studentList.html',
-          controller: 'studentListController',
+          controller: 'StudentListController',
           title: 'List of Students'
           /*
           resolve property is used to navigate to this route only after the promise is resolved.
@@ -40,12 +40,12 @@
         })
         .when('/student/:id', {
           templateUrl: 'src/student/detailStudent.html',
-          controller: 'detailStudentController',
+          controller: 'DetailStudentController',
           title: 'Student Detail'
         })
         .when('/add-student-form', {
           templateUrl: 'src/student/addStudentForm.html',
-          controller: 'addStudentFormController',
+          controller: 'AddStudentFormController',
           title: 'Add Student Form'
         })
         .otherwise({

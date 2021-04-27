@@ -19,5 +19,5 @@
 
   var appModule = angular.module('appModule');
   //'$scope' is passed into the array for minification purpose. This is sometimes called a min-safe array.
-  appModule.controller('homeController', ['$scope', homeController]);
+  appModule.controller('HomeController', ['$scope', homeController]);
 }());

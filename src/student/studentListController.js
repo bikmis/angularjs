@@ -59,6 +59,6 @@
 
   var appModule = angular.module('appModule');
   //'$rootScope', '$scope', '$location', '$routeParams', and '$route' are passed into the array for minification purpose. This is sometimes called a min-safe array.
-  appModule.controller('studentListController', ['$rootScope', '$scope', '$location', '$routeParams', '$route', studentListController]);
+  appModule.controller('StudentListController', ['$rootScope', '$scope', '$location', '$routeParams', '$route', studentListController]);
 
 }());
