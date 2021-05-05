@@ -1,4 +1,4 @@
-describe('employeeController', function () {
+describe('EmployeeController', function () {
 
   beforeEach(module("appModule"));
 
