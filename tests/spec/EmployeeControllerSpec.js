@@ -11,7 +11,7 @@ describe('employeeController', function () {
 
   beforeEach(function () {
     $scope = {};
-    $controller('employeeController', { $scope: $scope });
+    $controller('EmployeeController', { $scope: $scope });
   })
 
   it('sum', function () {
